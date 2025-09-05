@@ -1,8 +1,10 @@
+import "./Header.css";
+
 const Header = () => {
   return (
-    <div>
-      <button>?</button>
-      <h1>비율 계산기</h1>
+    <div className="Header">
+      <button className="help-button">?</button>
+      <h1 className="title">비율 계산기</h1>
     </div>
   );
 };
