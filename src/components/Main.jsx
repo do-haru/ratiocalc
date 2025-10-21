@@ -1,5 +1,13 @@
+import RatioEntry from "./RatioEntry";
+
 const Main = () => {
-  return <div>Main</div>;
+  return (
+    <div>
+      <RatioEntry />
+      <RatioEntry />
+      <RatioEntry />
+    </div>
+  );
 };
 
 export default Main;
