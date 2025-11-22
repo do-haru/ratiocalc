@@ -1,0 +1,12 @@
+.RatioEntry {
+  /* Flexbox 레이아웃: 가로 방향으로 배치 */
+  display: flex;
+  gap: 10px;
+
+  align-items: center;
+}
+
+.RatioEntry input {
+  width: 120px;
+  height: 40px;
+}
