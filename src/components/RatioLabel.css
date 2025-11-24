@@ -1,0 +1,31 @@
+.RatioLabel {
+  /* Flexbox 레이아웃: 가로 방향으로 배치 */
+  display: flex;
+  gap: 10px;
+}
+
+.Label1 {
+  flex: 1;
+}
+
+.Label1 > p {
+  /* 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Label2 {
+  /* Flexbox 레이아웃: 가로 방향으로 배치 */
+  display: flex;
+  flex: 2;
+}
+
+.Label2 > p {
+  flex: 1;
+
+  /* 가운데 정렬 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
