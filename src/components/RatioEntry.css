@@ -1,12 +1,53 @@
 .RatioEntry {
-  /* Flexbox 레이아웃: 가로 방향으로 배치 */
+  /* 내부 요소 가로 배치 */
   display: flex;
-  gap: 10px;
+}
 
+.Entry1 {
+  /* Entry1과 Entry2가 1:2 비율 */
+  display: flex;
+  flex: 1;
+
+  /* Entry1의 요소가 가운데에 위치 */
+  justify-content: center;
   align-items: center;
 }
 
-.RatioEntry input {
+.Entry1 > input {
+  /* 크기 설정 */
   width: 120px;
-  height: 40px;
+  height: 30px;
+
+  /* input 글자 정렬 */
+  text-align: center;
+}
+
+.Entry2 {
+  /* Entry1과 Entry2가 1:2 비율 */
+  display: flex;
+  flex: 2;
+
+  /* Entry2의 요소가 가운데에 위치 */
+  justify-content: center;
+  align-items: center;
+
+  /* 요소들 사이의 간격 */
+  gap: 8px;
+}
+
+.Entry2 > input {
+  /* 크기 설정 */
+  width: 120px;
+  height: 30px;
+
+  flex-shrink: 0; /* flex 압축 방지 */
+
+  /* input 글자 정렬 */
+  text-align: center;
+}
+
+.Entry2 > p {
+  width: 12px; /* 크기 설정 */
+  text-align: center; /* 범위의 가운데 위치 */
+  margin: 0; /* 수직정렬을 위한 maign값 */
 }
