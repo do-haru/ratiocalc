@@ -1,31 +1,52 @@
 .RatioLabel {
-  /* Flexbox 레이아웃: 가로 방향으로 배치 */
+  /* 내부 요소 가로 배치 */
   display: flex;
-  gap: 10px;
 }
 
 .Label1 {
+  /* Label1과 Label2가 1:2 비율 */
+  display: flex;
   flex: 1;
+
+  /* Label1의 요소가 가운데에 위치 */
+  justify-content: center;
+  align-items: center;
 }
 
 .Label1 > p {
-  /* 가운데 정렬 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 15px; /* 글자 크기 설정 */
 }
 
 .Label2 {
-  /* Flexbox 레이아웃: 가로 방향으로 배치 */
+  /* 내부 요소 가로 배치 */
   display: flex;
-  flex: 2;
+  flex: 2; /* Entry1과 Entry2가 1:2 비율 */
+
+  /* Label2의 요소가 가운데에 위치 */
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px; /* RatioEntry와 동일 간격을 위한 설정 */
 }
 
 .Label2 > p {
-  flex: 1;
+  font-size: 15px; /* 글자 크기 설정 */
+}
 
-  /* 가운데 정렬 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* RatioEntry의 <p> 값1, 값2 스타일 적용 */
+.Label2 > p:nth-child(1),
+.Label2 > p:nth-child(3) {
+  width: 120px; /* RationEntry의 input과 동일 크기 */
+  text-align: center; /* 요소 가운데 위치 */
+
+  font-size: 15px; /* 글자 크기 설정 */
+}
+
+/* RatioEntry의 <p> : 스타일 적용 */
+.Label2 > p:nth-child(2) {
+  width: 12px; /* RationEntry p와 동일 크기  */
+  text-align: center; /* 요소 가운데 위치  */
+
+  font-size: 15px; /* 글자 크기 설정 */
+  margin: 0; /* 수직정렬을 위한 maign값 */
 }
