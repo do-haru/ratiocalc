@@ -2,8 +2,9 @@ import "./RatioControls.css";
 
 const RatioControls = () => {
   return (
-    <div>
-      <p>RatioControls</p>
+    <div className="RatioControls">
+      <button className="reset-btn">초기화</button>
+      <button className="calculate-b수">계산</button>
     </div>
   );
 };

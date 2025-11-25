@@ -1,0 +1,8 @@
+.RatioControls {
+  /* 버튼들을 양쪽 끝, 세로로 중앙에 배치 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%; /* space-between을 위해 부모 영역 전체 사용 */
+}
