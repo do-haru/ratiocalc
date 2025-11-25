@@ -1,0 +1,57 @@
+.Footer {
+  /* 내부 요소 세로 배치 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 세로 중앙 배치 */
+
+  padding: 20px 0; /* 위아래 여백 주기 */
+
+  border-top: 1px solid #ddd;
+
+  color: #555;
+  font-size: 14px;
+}
+
+/* 제목(서비스 명) => Ratio Calculator */
+.Footer > p:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* 저작권  => © 2025 Ratio Calculator. All rights reserved. */
+.Footer > p:nth-child(2) {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.footer-meta {
+  /* 내부 요소 가로 배치 */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 6px;
+}
+
+.footer-meta > a {
+  text-decoration: none;
+  color: #007aff;
+  font-size: 13px;
+}
+
+.footer-divider {
+  color: #aaa;
+}
+
+.footer-version {
+  font-size: 13px;
+  color: #777;
+}
+
+.footer-email {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #555;
+}
