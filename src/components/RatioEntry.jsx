@@ -12,6 +12,8 @@ const RatioEntry = () => {
         <p> : </p>
         <input type="text" inputMode="numeric" placeholder="값2" />
       </div>
+
+      <button className="delete-entry-btn">-</button>
     </div>
   );
 };
