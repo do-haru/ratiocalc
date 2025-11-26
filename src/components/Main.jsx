@@ -1,14 +1,12 @@
 import RatioControls from "./RatioControls";
-import RatioEntry from "./RatioEntry";
+import RatioEntryList from "./RatioEntryList";
 import RatioLabel from "./RatioLabel";
 
 const Main = () => {
   return (
     <div>
       <RatioLabel />
-      <RatioEntry />
-      <RatioEntry />
-      <RatioEntry />
+      <RatioEntryList />
       <RatioControls />
     </div>
   );

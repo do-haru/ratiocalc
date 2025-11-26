@@ -1,0 +1,16 @@
+.RatioEntryList {
+  /* 내부 요소 세로 배치 */
+  display: flex;
+  flex-direction: column;
+}
+
+.entry-container {
+  /* 내부 요소 세로 배치 */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-entry-btn {
+  margin: 12px auto 0 auto; /* 버튼만 가운데 정렬 */
+}
