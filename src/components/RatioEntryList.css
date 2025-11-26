@@ -14,3 +14,7 @@
 .add-entry-btn {
   margin: 12px auto 0 auto; /* 버튼만 가운데 정렬 */
 }
+
+.add-entry-btn:disabled {
+  opacity: 0.5;
+}
