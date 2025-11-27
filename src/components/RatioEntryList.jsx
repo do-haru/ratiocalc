@@ -2,16 +2,20 @@ import "./RatioEntryList.css";
 
 import RatioEntry from "./RatioEntry";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const RatioEntryList = () => {
   // 기본 RatioEntry 3개
   const [entries, setEntries] = useState([1, 2, 3]);
 
+  // id 카운터
+  const nextId = useRef(4);
+
   // RatioEntry 추가 기능 (최대 10개)
   const addEntry = () => {
     if (entries.length >= 10) return;
-    setEntries((prev) => [...prev, prev.length + 1]);
+    setEntries((prev) => [...prev, nextId.current]);
+    nextId.current += 1;
   };
 
   // RatioEntry 삭제 기능 (최소 2개)
