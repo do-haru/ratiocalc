@@ -26,6 +26,13 @@ const Main = () => {
     setEntries((prev) => prev.filter((item) => item !== id));
   };
 
+  // RatioEntry 초기화 기능 (처음 상태로 되돌림)
+  const resetEntries = () => {
+    nextId.current += 100;
+    setEntries([nextId.current, nextId.current + 1, nextId.current + 2]);
+    nextId.current += 4;
+  };
+
   return (
     <div className="Main">
       <RatioLabel />
@@ -34,7 +41,7 @@ const Main = () => {
         onAdd={addEntry}
         onDelete={deleteEntry}
       />
-      <RatioControls />
+      <RatioControls onReset={resetEntries} />
     </div>
   );
 };
