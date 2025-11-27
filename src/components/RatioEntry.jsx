@@ -1,6 +1,6 @@
 import "./RatioEntry.css";
 
-const RatioEntry = () => {
+const RatioEntry = ({ id, onDelete, isDeleteDisabled }) => {
   return (
     <div className="RatioEntry">
       <div className="Entry1">
@@ -13,7 +13,13 @@ const RatioEntry = () => {
         <input type="text" inputMode="numeric" placeholder="값2" />
       </div>
 
-      <button className="delete-entry-btn">-</button>
+      <button
+        className="delete-entry-btn"
+        onClick={() => onDelete(id)}
+        disabled={isDeleteDisabled}
+      >
+        -
+      </button>
     </div>
   );
 };

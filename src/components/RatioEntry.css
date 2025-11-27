@@ -51,3 +51,7 @@
   text-align: center; /* 범위의 가운데 위치 */
   margin: 0; /* 수직정렬을 위한 maign값 */
 }
+
+.delete-entry-btn:disabled {
+  opacity: 0.4; /* 불투명도 */
+}
