@@ -1,16 +1,35 @@
 import "./RatioEntry.css";
 
-const RatioEntry = ({ id, onDelete, isDeleteDisabled }) => {
+const RatioEntry = ({ entry, onDelete, isDeleteDisabled, onChange }) => {
+  const { id, ingredient, value1, value2 } = entry;
+
   return (
     <div className="RatioEntry">
       <div className="Entry1">
-        <input type="text" placeholder="재료" />
+        <input
+          type="text"
+          placeholder="재료"
+          value={ingredient}
+          onChange={(e) => onChange(id, "ingredient", e.target.value)}
+        />
       </div>
 
       <div className="Entry2">
-        <input type="text" inputMode="numeric" placeholder="값1" />
+        <input
+          type="text"
+          inputMode="numeric"
+          placeholder="값1"
+          value={value1}
+          onChange={(e) => onChange(id, "value1", e.target.value)}
+        />
         <p> : </p>
-        <input type="text" inputMode="numeric" placeholder="값2" />
+        <input
+          type="text"
+          inputMode="numeric"
+          placeholder="값2"
+          value={value2}
+          onChange={(e) => onChange(id, "value2", e.target.value)}
+        />
       </div>
 
       <button

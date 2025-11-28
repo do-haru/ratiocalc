@@ -2,15 +2,16 @@ import "./RatioEntryList.css";
 
 import RatioEntry from "./RatioEntry";
 
-const RatioEntryList = ({ entries, onAdd, onDelete }) => {
+const RatioEntryList = ({ entries, onAdd, onDelete, onChange }) => {
   return (
     <div className="RatioEntryList">
       <div className="entry-container">
-        {entries.map((id) => (
+        {entries.map((entry) => (
           <RatioEntry
-            key={id}
-            id={id}
+            key={entry.id}
+            entry={entry}
             onDelete={onDelete}
+            onChange={onChange}
             isDeleteDisabled={entries.length <= 2}
           />
         ))}
