@@ -58,11 +58,14 @@ const Main = () => {
       <RatioLabel />
       <RatioEntryList
         entries={entries}
-        onAdd={addEntry}
         onDelete={deleteEntry}
         onChange={updateEntry}
       />
-      <RatioControls onReset={resetEntries} />
+      <RatioControls
+        entries={entries}
+        onReset={resetEntries}
+        onAdd={addEntry}
+      />
     </div>
   );
 };

@@ -1,12 +1,24 @@
 import "./RatioControls.css";
 
-const RatioControls = ({ onReset }) => {
+const RatioControls = ({ entries, onReset, onAdd }) => {
   return (
     <div className="RatioControls">
-      <button className="reset-btn" onClick={onReset}>
-        초기화
-      </button>
-      <button className="calculate-btn">계산</button>
+      <div className="controls-add">
+        <button
+          className="add-entry-btn"
+          onClick={onAdd}
+          disabled={entries.length >= 10}
+        >
+          + 추가하기
+        </button>
+      </div>
+
+      <div className="controls-actions">
+        <button className="reset-btn" onClick={onReset}>
+          초기화
+        </button>
+        <button className="calculate-btn">계산</button>
+      </div>
     </div>
   );
 };
