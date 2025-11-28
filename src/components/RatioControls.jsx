@@ -1,6 +1,6 @@
 import "./RatioControls.css";
 
-const RatioControls = ({ entries, onReset, onAdd }) => {
+const RatioControls = ({ entries, onAdd, onReset, onCalculate }) => {
   return (
     <div className="RatioControls">
       <div className="controls-add">
@@ -17,7 +17,9 @@ const RatioControls = ({ entries, onReset, onAdd }) => {
         <button className="reset-btn" onClick={onReset}>
           초기화
         </button>
-        <button className="calculate-btn">계산</button>
+        <button className="calculate-btn" onClick={onCalculate}>
+          계산
+        </button>
       </div>
     </div>
   );

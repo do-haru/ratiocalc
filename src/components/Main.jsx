@@ -32,7 +32,7 @@ const Main = () => {
   const updateEntry = (id, field, value) => {
     setEntries((prev) =>
       prev.map((entry) =>
-        entry.id == id ? { ...entry, [field]: value } : entry
+        entry.id === id ? { ...entry, [field]: value } : entry
       )
     );
   };
@@ -53,6 +53,50 @@ const Main = () => {
     ]);
   };
 
+  // 계산
+  const calculateEntries = () => {
+    if (entries.length === 0) return;
+
+    const base = entries[0];
+
+    const baseValue1 = Number(base.value1);
+    const baseValue2 = Number(base.value2);
+
+    if (!baseValue1 || !baseValue2) {
+      alert("첫 번째 항목의 값1과 값2를 모두 입력해주세요");
+      return;
+    }
+
+    const ratio = baseValue2 / baseValue1;
+
+    const ResultEntries = entries.map((entry, index) => {
+      const v1 = entry.value1 === "" ? "" : Number(entry.value1);
+      const v2 = entry.value2 === "" ? "" : Number(entry.value2);
+
+      if (index === 0) return entry; // 기준 entry는 그대로 둠
+
+      // 값1만 있는 경우
+      if (v1 && !v2) {
+        return {
+          ...entry,
+          value2: Math.round(v1 * ratio),
+        };
+      }
+
+      // 값2만 있는 경우
+      if (!v1 && v2) {
+        return {
+          ...entry,
+          value1: Math.round(v2 / ratio),
+        };
+      }
+
+      // 둘 다 없거나 둘 다 있으면 그대로 유지
+      return entry;
+    });
+    setEntries(ResultEntries);
+  };
+
   return (
     <div className="Main">
       <RatioLabel />
@@ -63,8 +107,9 @@ const Main = () => {
       />
       <RatioControls
         entries={entries}
-        onReset={resetEntries}
         onAdd={addEntry}
+        onReset={resetEntries}
+        onCalculate={calculateEntries}
       />
     </div>
   );
