@@ -4,12 +4,15 @@ const RatioLabel = () => {
   return (
     <div className="RatioLabel">
       <div className="Label1">
-        <p>재료</p>
+        <input type="text" value="재료" />
       </div>
       <div className="Label2">
-        <p>값1</p>
-        <p>:</p>
-        <p>값2</p>
+        <input type="text" value="값1" />
+        <p> : </p>
+        <input type="text" value="값2" />
+      </div>
+      <div className="Label3">
+        <button className="delete-entry-btn" disabled></button>
       </div>
     </div>
   );

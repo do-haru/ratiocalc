@@ -1,12 +1,22 @@
 .RatioEntryList {
-  /* 내부 요소 세로 배치 */
+  /* Flexbox 레이아웃: 세로 방향으로 배치 */
   display: flex;
   flex-direction: column;
+  align-items: center; /* 가운데 정렬 */
 }
 
 .entry-container {
-  /* 내부 요소 세로 배치 */
+  /* Flexbox 레이아웃: 세로 방향으로 배치 */
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (max-width: 480px) {
+  .entry-container {
+    gap: 12px;
+  }
 }

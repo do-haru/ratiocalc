@@ -1,25 +1,80 @@
 .RatioControls {
-  /* 내부 요소 세로 배치 */
+  /* Flexbox 레이아웃 : 내부 요소 세로 배치 */
   display: flex;
   flex-direction: column;
   align-items: center; /* 가로 정렬 */
+  width: 100%; /* .controls-actions의 justify-content를 위한 설정 */
 
-  width: 100%; /* .controls-bottom의 justify-content를 위한 설정 */
+  /* 요소간 간격 */
+  gap: 20px;
 }
 
 .controls-add {
-  width: 100%;
+  /* Flex 레이아웃 : 가운데 배치 */
   display: flex;
   justify-content: center; /* 가운데 배치 */
+  margin-bottom: 12px;
+
+  /* 넓이 */
+  width: 100%;
+}
+
+.add-entry-btn {
+  padding: 8px 20px;
+
+  /* 배경 */
+  border: none;
+  background-color: transparent;
+
+  /* 글자 */
+  font-size: 14px;
+  color: #222;
+
+  /* 커서 */
+  cursor: pointer;
+
+  /* 애니메이션 */
+  transition: 0.15s ease;
 }
 
 .add-entry-btn:disabled {
+  /* 불투명도 */
   opacity: 0.5;
+  cursor: default;
 }
 
 .controls-actions {
   /* 내부 요소 양쪽 끝 배치 */
-  width: 100%;
   display: flex;
   justify-content: space-between;
+
+  /* 넓이 */
+  width: 100%;
+  max-width: 600px;
+}
+
+.reset-btn,
+.calculate-btn {
+  /* 글자 */
+  font-size: 14px;
+  color: #222;
+
+  /* 배경 */
+  border: 1px solid #c8c8c8;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+
+  /* 여백 */
+  padding: 8px 20px;
+
+  /* 커서 */
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .reset-btn,
+  .calculate-btn {
+    font-size: 13px;
+    padding: 7px 16px;
+  }
 }

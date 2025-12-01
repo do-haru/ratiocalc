@@ -13,7 +13,6 @@ const RatioEntry = ({ entry, onDelete, isDeleteDisabled, onChange }) => {
           onChange={(e) => onChange(id, "ingredient", e.target.value)}
         />
       </div>
-
       <div className="Entry2">
         <input
           type="text"
@@ -31,14 +30,15 @@ const RatioEntry = ({ entry, onDelete, isDeleteDisabled, onChange }) => {
           onChange={(e) => onChange(id, "value2", e.target.value)}
         />
       </div>
-
-      <button
-        className="delete-entry-btn"
-        onClick={() => onDelete(id)}
-        disabled={isDeleteDisabled}
-      >
-        -
-      </button>
+      <div className="Entry3">
+        <button
+          className="delete-entry-btn"
+          onClick={() => onDelete(id)}
+          disabled={isDeleteDisabled}
+        >
+          ×
+        </button>
+      </div>
     </div>
   );
 };

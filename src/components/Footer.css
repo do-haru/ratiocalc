@@ -1,57 +1,76 @@
 .Footer {
-  /* 내부 요소 세로 배치 */
+  /* Flexbox 레이아웃: 세로 방향으로 배치 */
   display: flex;
   flex-direction: column;
-  align-items: center; /* 세로 중앙 배치 */
+  align-items: center; /* 가로 중앙 정렬 */
+  gap: 5px; /* 요소 간 간격 */
 
-  padding: 20px 0; /* 위아래 여백 주기 */
+  padding: 20px 0; /* 위아래 여백 추가 */
 
-  border-top: 1px solid #ddd;
-
-  color: #555;
-  font-size: 14px;
+  /* 상단 테두리 */
+  border-top: 1px solid #dcdcdc;
 }
 
 /* 제목(서비스 명) => Ratio Calculator */
 .Footer > p:first-child {
+  /* 글자 설정 */
+  color: #555;
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 4px;
+
+  margin: 0; /* .Footer의 gap을 위한 <p>의 기본 margin 제거 */
 }
 
 /* 저작권  => © 2025 Ratio Calculator. All rights reserved. */
 .Footer > p:nth-child(2) {
-  margin: 0;
+  /* 글자 설정 */
   font-size: 13px;
-  color: #666;
+  color: #777;
+
+  margin: 0; /* .Footer의 gap을 위한 <p>의 기본 margin 제거 */
 }
 
 .footer-meta {
-  /* 내부 요소 가로 배치 */
+  /* Flexbox 레이아웃: 가로 방향으로 배치 */
   display: flex;
-  align-items: center;
-  gap: 8px;
+  align-items: center; /* 가로 중앙 정렬 */
+  gap: 8px; /* 내부 요소 간격 */
 
-  margin-top: 6px;
+  margin: 0; /* .Footer의 gap을 위한 <p>의 기본 margin 제거 */
 }
 
 .footer-meta > a {
-  text-decoration: none;
-  color: #007aff;
+  /* 글자 설정 */
   font-size: 13px;
+  color: #777;
+
+  /* text밑줄 설정 */
+  text-decoration: none;
 }
 
 .footer-divider {
+  /* 글자 설정 */
+  font-size: 13px;
   color: #aaa;
+
+  /* 글자 정렬을 위한 설정(|가 아래로 내려간 것 처럼 보이는 것 방지) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding-bottom: 1px; /* 아래로 내려가는 것 보정 */
 }
 
 .footer-version {
+  /* 글자 설정 */
   font-size: 13px;
   color: #777;
 }
 
 .footer-email {
-  margin-top: 4px;
+  /* 글자 설정 */
   font-size: 13px;
   color: #555;
+
+  margin: 0; /* .Footer의 gap을 위한 <p>의 기본 margin 제거 */
 }
