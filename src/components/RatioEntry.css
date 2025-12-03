@@ -1,30 +1,33 @@
 .RatioEntry {
-  /* Flexbox 레이아웃: 가로 방향으로 배치 */
-  display: flex;
+  /* 배치: grid 레이아웃 */
+  display: grid;
+  grid-template-columns: minmax(130px, 1fr) minmax(260px, 2fr) 28px;
+  column-gap: 30px;
+  justify-content: center;
   align-items: center;
-  justify-content: center; /* 가로 중앙 정렬 */
 
-  gap: 45px;
+  width: fit-content;
+  margin: 0 auto;
 
   color: #333;
 }
 
-.Entry1 {
+.Entry1,
+.Entry2,
+.Entry3 {
   /* Flexbox 레이아웃 */
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .Entry2 {
   /* Flexbox 레이아웃: 가로 방향으로 배치 */
-  display: flex;
-  align-items: center;
-
   /* 내부 요소 간격 */
   gap: 6px;
 }
 
-input {
+.RatioEntry input {
   /* 크기 */
   width: 120px;
   height: 36px;
@@ -38,22 +41,18 @@ input {
   text-align: center;
 }
 
-.Entry2 > p {
+.RatioEntry p {
   /* 글자 */
   width: 14px;
   text-align: center;
   color: #666;
 
+  padding-bottom: 3px;
+
   margin: 0; /* 수직정렬을 위한 maign값 */
 }
 
-.Entry3 {
-  /* Flexbox 레이아웃 */
-  display: flex;
-  align-items: center;
-}
-
-.delete-entry-btn {
+.RatioEntry .delete-entry-btn {
   /* 크기 */
   width: 26px;
   height: 26px;
@@ -75,21 +74,37 @@ input {
   cursor: pointer;
 }
 
-.delete-entry-btn:disabled {
+.RatioEntry .delete-entry-btn:disabled {
   /* 불투명 */
   opacity: 0.5;
 }
 
 @media (max-width: 480px) {
   .RatioEntry {
-    flex-direction: column;
-    gap: 6px;
+    /* 배치 */
+    grid-template-columns:
+      minmax(85px, 1fr)
+      minmax(140px, 2fr)
+      28px;
+    column-gap: 6px;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* 너비 */
+    width: fit-content;
   }
 
-  .Entry1 > input,
-  .Entry2 > input {
-    width: 100px;
-    height: 32px;
+  .Entry2 {
+    /* 내부 요소 간격 */
+    gap: 2px;
+  }
+
+  .RatioEntry input {
+    /* 크기 */
+    width: 90px;
+    height: 27px;
+
+    /* 글자 */
     font-size: 13px;
   }
 }
