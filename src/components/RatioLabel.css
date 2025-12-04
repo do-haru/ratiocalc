@@ -1,31 +1,28 @@
 .RatioLabel {
-  /* 배치: grid 레이아웃 */
+  /* 배치: Grid 레이아웃 */
   display: grid;
   grid-template-columns: minmax(130px, 1fr) minmax(260px, 2fr) 28px;
   column-gap: 30px;
-  justify-content: center;
-  align-items: center;
+  justify-items: center; /* cell의 요소 가로 정렬 */
+  align-items: center; /* cell의 요소 세로 정렬 */
   margin: 0 auto;
 
   /* 너비 */
   width: fit-content;
-
-  /* 글자 */
-  color: #333;
 }
 
 .Label1,
 .Label2,
 .Label3 {
-  /* Flexbox 레이아웃 (.Label2는 가로방향으로 배치) */
+  /* 배치: Flexbox 레이아웃 */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .Label2 {
-  /* 내부 요소 간격 */
-  gap: 6px;
+  /* 배치 */
+  gap: 6px; /* 내부 요소 간격 */
 }
 
 .RatioLabel input {
@@ -33,13 +30,12 @@
   width: 120px;
   height: 36px;
 
-  /* 테두리 */
+  /* 배경 */
   border: 1px solid transparent;
   background-color: transparent;
-  border-radius: 8px;
 
   /* 글자 */
-  font-size: 14px;
+  font-size: 15px;
   color: #222;
   text-align: center;
 
@@ -49,11 +45,12 @@
 
 .RatioLabel p {
   /* 글자 */
-  width: 14px;
+  width: 15px;
   text-align: center;
   color: #222;
 
   /* 배치 */
+  padding-bottom: 3px; /* input과 정렬을 위한 padding */
   margin: 0; /* 수직정렬을 위한 maign값 */
 }
 
@@ -70,11 +67,6 @@
   color: transparent;
   font-size: 18px;
 
-  /* 가운데 정렬 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   /* 버튼 클릭 방지 */
   pointer-events: none;
 }
@@ -82,16 +74,8 @@
 @media (max-width: 480px) {
   .RatioLabel {
     /* 배치 */
-    grid-template-columns:
-      minmax(85px, 1fr)
-      minmax(140px, 2fr)
-      28px;
+    grid-template-columns: minmax(85px, 1fr) minmax(140px, 2fr) 28px;
     column-gap: 6px;
-    margin-left: auto;
-    margin-right: auto;
-
-    /* 너비 */
-    width: fit-content;
   }
 
   .Label2 {

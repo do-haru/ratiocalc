@@ -1,30 +1,28 @@
 .RatioEntry {
-  /* 배치: grid 레이아웃 */
+  /* 배치: Grid 레이아웃 */
   display: grid;
   grid-template-columns: minmax(130px, 1fr) minmax(260px, 2fr) 28px;
   column-gap: 30px;
-  justify-content: center;
-  align-items: center;
-
-  width: fit-content;
+  justify-items: center; /* cell의 요소 가로 정렬 */
+  align-items: center; /* cell의 요소 세로 정렬 */
   margin: 0 auto;
 
-  color: #333;
+  /* 너비 */
+  width: fit-content;
 }
 
 .Entry1,
 .Entry2,
 .Entry3 {
-  /* Flexbox 레이아웃 */
+  /* 배치: Flexbox 레이아웃 */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .Entry2 {
-  /* Flexbox 레이아웃: 가로 방향으로 배치 */
-  /* 내부 요소 간격 */
-  gap: 6px;
+  /* 배치 */
+  gap: 6px; /* 내부 요소 간격 */
 }
 
 .RatioEntry input {
@@ -32,11 +30,12 @@
   width: 120px;
   height: 36px;
 
-  /* 테두리 */
+  /* 배경 */
   border: 1px solid #dcdcdc;
   border-radius: 8px;
 
   /* 글자 */
+  color: #333;
   font-size: 14px;
   text-align: center;
 }
@@ -47,8 +46,8 @@
   text-align: center;
   color: #666;
 
-  padding-bottom: 3px;
-
+  /* 배치 */
+  padding-bottom: 3px; /* input과 정렬을 위한 padding */
   margin: 0; /* 수직정렬을 위한 maign값 */
 }
 
@@ -65,33 +64,23 @@
   color: #666;
   font-size: 18px;
 
-  /* 가운데 정렬 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   /* 커서 */
   cursor: pointer;
 }
 
 .RatioEntry .delete-entry-btn:disabled {
-  /* 불투명 */
+  /* 배경 */
   opacity: 0.5;
+
+  /* 커서 */
+  cursor: default;
 }
 
 @media (max-width: 480px) {
   .RatioEntry {
     /* 배치 */
-    grid-template-columns:
-      minmax(85px, 1fr)
-      minmax(140px, 2fr)
-      28px;
+    grid-template-columns: minmax(85px, 1fr) minmax(140px, 2fr) 28px;
     column-gap: 6px;
-    margin-left: auto;
-    margin-right: auto;
-
-    /* 너비 */
-    width: fit-content;
   }
 
   .Entry2 {

@@ -1,1 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+html,
+body {
+  /* 크기 */
+  height: 100%;
+
+  /* 배치 */
+  margin: 0;
+}
+
+#root {
+  /* 크기 */
+  min-height: 100%;
+
+  /* 배치: Flex 레이아웃 */
+  display: flex;
+  flex-direction: column;
+}
