@@ -1,0 +1,103 @@
+.HelpGuide {
+  /* 배치 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  /* 위치 */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* 크기 */
+  width: 100%;
+  height: 100%;
+
+  /* 배경 */
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+.help-window {
+  /* 배치*/
+  padding: 24px;
+
+  /* 위치 */
+  position: relative;
+
+  /* 크기 */
+  width: 90%;
+  max-width: 420px;
+
+  /* 배경 */
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.help-close-btn {
+  /* 배치 */
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  /* 글자 */
+  font-size: 22px;
+  color: #555;
+
+  /* 배경 */
+  border: none;
+  background: none;
+
+  /* 커서 */
+  cursor: pointer;
+}
+
+.help-slide {
+  /* 배치 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.slide-btn {
+  /* 배치 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  line-height: 1;
+
+  /* 배경 */
+  border: none;
+  background: none;
+
+  /* 글자 */
+  font-size: 40px;
+  color: #555;
+
+  /* 커서*/
+  cursor: pointer;
+
+  user-select: none;
+}
+
+.slide-btn.left {
+  margin-right: 4px;
+}
+.slide-btn.right {
+  margin-left: 4px;
+}
+
+.slide-image {
+  /* 크기 */
+  width: 70%;
+  max-width: 260px;
+
+  /* 배경 */
+  border-radius: 8px;
+
+  object-fit: contain;
+}
