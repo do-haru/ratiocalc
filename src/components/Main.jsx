@@ -92,7 +92,7 @@ const Main = () => {
       if (v1 && !v2) {
         return {
           ...entry,
-          value2: Math.round(v1 * ratio),
+          value2: Number((v1 * ratio).toFixed(2)),
         };
       }
 
@@ -100,7 +100,7 @@ const Main = () => {
       if (!v1 && v2) {
         return {
           ...entry,
-          value1: Math.round(v2 / ratio),
+          value1: Number((v2 / ratio).toFixed(2)),
         };
       }
 
