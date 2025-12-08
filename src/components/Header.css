@@ -46,6 +46,12 @@
   border: 1.5px solid #666;
   background-color: transparent;
 
+  /* 가운데 정렬 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 28px;
+
   /* 커서 */
   cursor: pointer;
 }
