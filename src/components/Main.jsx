@@ -4,7 +4,7 @@ import RatioControls from "./RatioControls";
 import RatioEntryList from "./RatioEntryList";
 import RatioLabel from "./RatioLabel";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Main = () => {
   // Entry 배열 (id, ingredient, value1, value2를 모두 state로 관리)
@@ -109,6 +109,19 @@ const Main = () => {
     });
     setEntries(ResultEntries);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Enter") {
+        calculateEntries();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [entries]);
 
   return (
     <div className="Main">
