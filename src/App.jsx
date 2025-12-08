@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import { useState } from "react";
 import HelpGuide from "./components/HelpGuide";
 
+import { Analytics } from "@vercel/analytics/react";
+
 function App() {
   const [isHelpOpen, setIsHelpOpen] = useState(false);
 
@@ -33,6 +35,7 @@ function App() {
           ]}
         />
       )}
+      <Analytics />
     </>
   );
 }
