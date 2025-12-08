@@ -66,6 +66,9 @@
 
   /* 커서 */
   cursor: pointer;
+
+  /* 버튼 텍스트 선택 방지 */
+  user-select: none;
 }
 
 .RatioEntry .delete-entry-btn:disabled {

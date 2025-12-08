@@ -30,6 +30,9 @@
 
   /* 애니메이션 */
   transition: 0.15s ease;
+
+  /* 버튼 텍스트 선택 방지 */
+  user-select: none;
 }
 
 .RatioControls .add-entry-btn:disabled {
@@ -66,6 +69,9 @@
 
   /* 커서 */
   cursor: pointer;
+
+  /* 드래그 방지 */
+  user-select: none;
 }
 
 @media (max-width: 480px) {

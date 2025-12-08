@@ -51,6 +51,8 @@
 
   /* 커서 */
   cursor: pointer;
+
+  user-select: none;
 }
 
 .help-slide {
@@ -81,6 +83,7 @@
   /* 커서*/
   cursor: pointer;
 
+  /* 버튼 텍스트 선택 방지 */
   user-select: none;
 }
 
