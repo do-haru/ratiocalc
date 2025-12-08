@@ -18,6 +18,10 @@ const Main = () => {
   // id 카운터
   const nextId = useRef(4);
 
+  // 비율 계산기의 첫번째 RatioEntry의 value1, value2
+  const baseValue1Ref = useRef(null);
+  const baseValue2Ref = useRef(null);
+
   // RatioEntry 추가 기능 (최대 10개)
   const addEntry = () => {
     if (entries.length >= 10) return;
@@ -63,8 +67,17 @@ const Main = () => {
     const baseValue2 = Number(base.value2);
 
     if (!baseValue1 || !baseValue2) {
-      alert("첫 번째 항목의 값1과 값2를 모두 입력해주세요");
-      return;
+      alert("첫 번째 항목의 값1과 값2에 숫자를 입력해주세요");
+
+      if (!baseValue1) {
+        baseValue1Ref.current.focus();
+        return;
+      }
+
+      if (!baseValue2) {
+        baseValue2Ref.current.focus();
+        return;
+      }
     }
 
     const ratio = baseValue2 / baseValue1;
@@ -104,6 +117,8 @@ const Main = () => {
         entries={entries}
         onDelete={deleteEntry}
         onChange={updateEntry}
+        baseValue1Ref={baseValue1Ref}
+        baseValue2Ref={baseValue2Ref}
       />
       <RatioControls
         entries={entries}

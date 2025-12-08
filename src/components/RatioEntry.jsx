@@ -1,6 +1,13 @@
 import "./RatioEntry.css";
 
-const RatioEntry = ({ entry, onDelete, isDeleteDisabled, onChange }) => {
+const RatioEntry = ({
+  entry,
+  onDelete,
+  isDeleteDisabled,
+  onChange,
+  baseValue1Ref,
+  baseValue2Ref,
+}) => {
   const { id, ingredient, value1, value2 } = entry;
 
   return (
@@ -20,6 +27,7 @@ const RatioEntry = ({ entry, onDelete, isDeleteDisabled, onChange }) => {
           placeholder="값1"
           value={value1}
           onChange={(e) => onChange(id, "value1", e.target.value)}
+          ref={baseValue1Ref}
         />
         <p> : </p>
         <input
@@ -28,6 +36,7 @@ const RatioEntry = ({ entry, onDelete, isDeleteDisabled, onChange }) => {
           placeholder="값2"
           value={value2}
           onChange={(e) => onChange(id, "value2", e.target.value)}
+          ref={baseValue2Ref}
         />
       </div>
       <div className="Entry3">
