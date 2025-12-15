@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ratiocalc.vercel.app/sitemap.xml
+Sitemap: https://theratiocalc.com/sitemap.xml
